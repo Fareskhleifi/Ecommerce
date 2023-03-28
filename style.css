@@ -6,22 +6,28 @@
   font-size: 16px;
   list-style: none;
 }
+
 :root{
   --main-color:#fd4646;
   --text-color: #171427;
   --bg-color: #fff;
 }
 
-.logo
-{
-  width: auto;
+.logo {
+  height: 100%;
+  width: 18%;
 }
-img{
+
+img {
   width: 100%;
+  height: auto;
 }
-body{
+
+body {
   color: var(--text-color);
+  font-family: Arial, sans-serif;
 }
+
 .navbar {
   padding: 0;
   margin: 0;
@@ -30,6 +36,7 @@ body{
   height: 70px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 form {
@@ -78,13 +85,16 @@ button[type="submit"] svg {
   overflow: hidden;
   white-space: nowrap;
 }
-section{
+
+section {
   padding: 4rem 0 3rem;
 }
+
 .menu1 {
   display: flex;
   gap: 1em;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu1 a {
@@ -92,34 +102,39 @@ section{
   font-size: 1.5em;
   text-decoration: none;
 }
-.container{
+
+.container {
   max-width: 1068px;
   margin: auto;
-  width: 100%;
+  width: 90%;
+  padding: 0 1rem;
 }
-.titre-article{
+
+.titre-article {
   margin-bottom: 1.5rem;
   font-size: 2.5em;
   font-weight: 600;
   text-align: center;
 }
 
-.shop  {
+.shop {
   margin-top: 2em;
 }
-.box{
+
+.box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  
 }
-.produit{
+
+.produit {
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
   transition: all 0.3s ease;
   padding: 10px;
 }
+
 .produit-fav {
   position: absolute;
   top: 10px;
@@ -133,14 +148,12 @@ section{
   align-items: center;
   z-index: 2;
   cursor: pointer;
- 
 }
 
 .produit-fav i {
   color: #ccc;
   font-size: 20px;
-  border-top-right-radius: 10px;
-  
+  border-top-right-radius: 10px
 }
 
 .produit-fav:hover i {
@@ -358,3 +371,30 @@ footer span {
 footer p{
   margin-top: 1.5rem;
 }
+@media only screen and (max-width: 992px) {
+  .produit {
+  flex-basis: 45%;
+  }
+  }
+  
+  @media only screen and (max-width: 768px) {
+  .produit {
+  flex-basis: 60%;
+  }
+  }
+  
+  @media only screen and (max-width: 600px) {
+  footer div {
+  flex-basis: 100%;
+  }
+  }
+  
+  @media only screen and (max-width: 400px) {
+  footer {
+  flex-wrap: wrap;
+  text-align: center;
+  }
+  footer div {
+  flex-basis: 100%;
+  }
+  }

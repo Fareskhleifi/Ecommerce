@@ -14,8 +14,7 @@
 }
 
 .logo {
-  height: 100%;
-  width: 18%;
+  width: auto;
 }
 
 img {
@@ -31,7 +30,6 @@ body {
 .navbar {
   padding: 0;
   margin: 0;
-  background-color: rgb(25, 41, 70);
   width: 100%;
   height: 70px;
   display: flex;
@@ -42,6 +40,8 @@ body {
 form {
   display: flex;
   align-items: center;
+  margin: 0%;
+  width: 100%;
 }
 
 label,
@@ -55,17 +55,20 @@ input[type="text"] {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border: 1px solid #ccc;
-  padding: 2%;
+  padding: 2% 3%;
   width: 100%;
+  border-right: none;
 }
 
 button[type="submit"] {
-  background-color: #448ec3;
+  background-color: transparent;
   color: #0c0000;
   border: none;
-  padding: 2.1%;
+  padding: 1.7% 3%;
   margin-left: -1px;
   cursor: pointer;
+  border: 1px solid #ccc;
+  border-left: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -96,13 +99,72 @@ section {
   align-items: center;
   flex-wrap: wrap;
 }
-
-.menu1 a {
+.icon-menu1{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.icon-menu1 a{
   color: black;
   font-size: 1.5em;
   text-decoration: none;
 }
+nav {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+}
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }@media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+  
+    nav.show ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }  
+}
+header {
+  border-bottom: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+  header {
+    border-top-width: 0.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
 .container {
   max-width: 1068px;
   margin: auto;
@@ -115,6 +177,35 @@ section {
   font-size: 2.5em;
   font-weight: 600;
   text-align: center;
+}
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+.hamburger-menu i {
+  color: #000; /* Change this to change the color of the hamburger icon */
+  font-size: 1.5rem;
+}
+
+.hamburger-menu span {
+  display: none; /* Hide the text "Menu" */
+}
+
+/* Optional hover effect */
+.hamburger-menu:hover i {
+  color: #555;
 }
 
 .shop {
@@ -256,6 +347,8 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
+    position: relative;
+    margin-left: 30%;
   }
   
   footer a:hover {
@@ -285,32 +378,21 @@ font-size: 0.9rem;
 margin-bottom: 0;
 }
 
-footer .social-icons {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 20px;
-}
-
-footer .social-icon {
+footer .social-media {
 margin: 0 10px;
-color: #999;
+color: #0c0c0c;
 font-size: 1.2rem;
 transition: 0.5s;
+align-items: center;
+text-align: center;
 }
 .fab{
   color: #0c0000;
 }
-footer .social-icon:hover {
-color: #555;
-transform: translateY(-5px);
-}
-
 @media only screen and (max-width: 600px) {
 footer {
   flex-wrap: wrap;
 }
-
 footer div {
   flex-basis: 50%;
   text-align: center;
@@ -367,6 +449,10 @@ footer span {
 .img-footer{
   max-width: 100%;
   width: 50%;
+}
+.lien-img:hover{
+  cursor: pointer;
+
 }
 footer p{
   margin-top: 1.5rem;

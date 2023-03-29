@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-9aPpxuV7HRSF1GWuV7yE8TtW0TtQvcsoXtvVZgMdSO8tWjKfHsXTs+wPLyLd8I4W4OvNOl+jY9Z1hqfnn71S+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="gnr">
         <header>
             <div class="navbar">      
-            <img class="logo" src="logo-bijouterie-8.webp" alt="">   
+            <img class="logo" src="images/téléchargement.svg" alt="">   
+            
             <div class="menu1">
                 <form action="#" method="get">
                     <label for="search-input">
@@ -27,18 +29,45 @@
                       </svg>
                       <span class="visually-hidden">Rechercher</span>
                     </button>
-                  </form> 
+                  </form></div>
+              <div class="icon-menu1"> 
                 <a href="#"><i class="far fa-heart"></i></a>
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"><i class="far fa-user"></i></a>
             </div>
+            <button class="hamburger-menu">
+              <i class="fas fa-bars"></i>
+              <span class="visually-hidden">Menu</span>
+            </button>
+            <script>
+              const hamburger = document.querySelector('.hamburger-menu');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
+
+            </script>
         </div>
     </header>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Bagues</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Boucles d'oreilles</a></li>
+        <li><a href="#">Colliers</a></li>
+        <li><a href="#">Lunettes</a></li>
+        <li><a href="#">Accesoires de mode</a></li>
+      </ul>
+    </nav>   
         <section class="shop container">
         <h1 class="titre-article">Nos Articles</h1>
         <div class="box">
-            <div class="produit">
+         
+            <div class="produit"> <a class="lien-img" href="#">
                 <img src="images/photo-1611235116292-df7f928f3a0f.avif" alt="">
+              </a>
                 <div class="produit-fav">
                     <i class="far fa-heart"></i>
                   </div>
@@ -48,7 +77,9 @@
                     
                 </div>
                 <div class="produit">
+                  <a class="lien-img" href="#">
                     <img src="images/photo-1611652022419-a9419f74343d.avif" alt="">
+                  </a>
                     <div class="produit-fav">
                         <i class="far fa-heart"></i>
                       </div>
@@ -56,8 +87,8 @@
                         <span class="price">60 DT</span>
                         <i class="fas fa-shopping-bag"></i>
                     </div>
-                    <div class="produit">
-                        <img src="images/premium_photo-1675003662150-2569448d2b3b.avif">
+                    <div class="produit"><a class="lien-img" href="#">
+                        <img src="images/premium_photo-1675003662150-2569448d2b3b.avif"></a>
                         <div class="produit-fav">
                             <i class="far fa-heart"></i>
                           </div>
@@ -65,8 +96,8 @@
                             <span class="price">60 DT</span>
                             <i class="fas fa-shopping-bag"></i>
                         </div>
-                        <div class="produit">
-                            <img src="images/premium_photo-1675003663407-ed9c0de23be1.avif" alt="">
+                        <div class="produit"><a class="lien-img" href="#">
+                            <img src="images/premium_photo-1675003663407-ed9c0de23be1.avif" alt=""></a>
                             <div class="produit-fav">
                                 <i class="far fa-heart"></i>
                               </div>
@@ -74,8 +105,8 @@
                                 <span class="price">60 DT</span>
                                 <i class="fas fa-shopping-bag"></i>
                             </div>
-                            <div class="produit">
-                                <img src="images/photo-1559006864-38a01f201f95.avif" alt="">
+                            <div class="produit"><a class="lien-img" href="#">
+                                <img src="images/photo-1559006864-38a01f201f95.avif" alt=""></a>
                                 <div class="produit-fav">
                                     <i class="far fa-heart"></i>
                                   </div>
@@ -83,8 +114,8 @@
                                     <span class="price">60 DT</span>
                                     <i class="fas fa-shopping-bag"></i>
                                 </div>
-                                <div class="produit">
-                                    <img src="images/photo-1506630448388-4e683c67ddb0.avif" alt="">
+                                <div class="produit"><a class="lien-img" href="#">
+                                    <img src="images/photo-1506630448388-4e683c67ddb0.avif" alt=""></a>
                                     <div class="produit-fav">
                                         <i class="far fa-heart"></i>
                                       </div>
@@ -92,8 +123,8 @@
                                         <span class="price">60 DT</span>
                                         <i class="fas fa-shopping-bag"></i>
                                     </div>
-                                    <div class="produit">
-                                        <img src="images/photo-1481980235850-66e47651e431.avif" alt="">
+                                    <div class="produit"><a class="lien-img" href="#">
+                                        <img src="images/photo-1481980235850-66e47651e431.avif" alt=""></a>
                                         <div class="produit-fav">
                                             <i class="far fa-heart"></i>
                                           </div>
@@ -101,8 +132,8 @@
                                             <span class="price">60 DT</span>
                                             <i class="fas fa-shopping-bag"></i>
                                         </div>
-                                        <div class="produit">
-                                 <img src="images/photo-1599458349289-18f0ee82e6ed.avif" alt="">
+                                        <div class="produit"><a class="lien-img" href="#">
+                                 <img src="images/photo-1599458349289-18f0ee82e6ed.avif" alt=""></a>
                                  <div class="produit-fav">
                                     <i class="far fa-heart"></i>
                                   </div>
@@ -110,8 +141,8 @@
                           <span class="price">60 DT</span>
                                 <i class="fas fa-shopping-bag"></i>
                              </div>
-                           <div class="produit">
-                         <img src="images/photo-1599643478518-a784e5dc4c8f.avif" alt="">
+                           <div class="produit"><a class="lien-img" href="#">
+                         <img src="images/photo-1599643478518-a784e5dc4c8f.avif" alt=""></a>
                          <div class="produit-fav">
                             <i class="far fa-heart"></i>
                           </div>
@@ -119,8 +150,8 @@
                       <span class="price">60 DT</span>
                   <i class="fas fa-shopping-bag"></i>
             </div>
-            <div class="produit">
-                <img src="images/photo-1606760227091-3dd870d97f1d.avif" alt="">
+            <div class="produit"><a class="lien-img" href="#">
+                <img src="images/photo-1606760227091-3dd870d97f1d.avif" alt=""></a>
                 <div class="produit-fav">
                     <i class="far fa-heart"></i>
                   </div>
@@ -128,8 +159,8 @@
              <span class="price">60 DT</span>
          <i class="fas fa-shopping-bag"></i>
    </div>
-   <div class="produit">
-    <img src="images/photo-1615197419962-90f21da0956d.avif" alt="">
+   <div class="produit"><a class="lien-img" href="#">
+    <img src="images/photo-1615197419962-90f21da0956d.avif" alt=""></a>
     <div class="produit-fav">
         <i class="far fa-heart"></i>
       </div>
@@ -137,8 +168,8 @@
  <span class="price">60 DT</span>
 <i class="fas fa-shopping-bag"></i>
 </div>
-<div class="produit">
-    <img src="images/photo-1600721391776-b5cd0e0048f9.avif" alt="">
+<div class="produit"><a class="lien-img" href="#">
+    <img src="images/photo-1600721391776-b5cd0e0048f9.avif" alt=""></a>
     <div class="produit-fav">
         <i class="far fa-heart"></i>
       </div>
@@ -162,8 +193,8 @@
                 
                 </p>
         </div>
-        <div>
-              <h2>Nous suivre</h2>
+        <div class="social-media">
+              <h2 >Nous suivre</h2>
               <ul>
                 <li><a href="https://www.facebook.com/#"><i class="fab fa-facebook"></i> Facebook</a></li>
                 <li><a href="https://twitter.com/#"><i class="fab fa-twitter"></i> Twitter</a></li>

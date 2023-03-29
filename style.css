@@ -110,6 +110,16 @@ section {
   font-size: 1.5em;
   text-decoration: none;
 }
+@media only screen and (max-width: 768px) {
+  .icon-menu1 {
+    display: none;
+  }
+
+  .menu1 {
+    margin-left: auto;
+  }
+}
+
 nav {
   margin-left: 10%;
   margin-right: 10%;
